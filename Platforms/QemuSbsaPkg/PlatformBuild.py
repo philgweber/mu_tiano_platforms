@@ -430,17 +430,17 @@ class PlatformBuilder(UefiBuilder, BuildSettingsManager):
                     "owner": "Plat",
                     "size": "0x300000"
                 },
-                "mssp": {
-                    "image": {
-                        "file": os.path.join(self.env.GetValue('BUILD_OUTPUT_BASE'), 'FV', 'BL32_AP_MM_SP1.fd'),
-                        "offset": "0x10000"
-                    },
-                    "pm": {
-                        "file": os.path.join(os.path.dirname(__file__), "fdts/qemu_sbsa_mssp_config.dts"),
-                        "offset": "0x1000"
-                    },
-                    "uuid": "b8bcbd0c-8e8f-4ebe-99eb-3cbbdd0cd412",
-                    "owner": "Plat"
+                "ec-sp": {
+                  "image": {
+                    "file": self.env.GetValue('EC_SP_BINARY'),
+                    "offset": "0x10000"
+                  },
+                  "pm": {
+                    "file": self.env.GetValue('EC_SP_DTS'),
+                    "offset": "0x1000"
+                  },
+                  "uuid": "e4d3bada-0edd-4e6c-a199-c19af4eae6b5",
+                  "owner": "Plat"
                 }
             }
             json.dump(data, f, indent=4)

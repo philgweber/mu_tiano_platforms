@@ -24,7 +24,7 @@ new file mode 100644
 index 000000000..3c0187cfa
 --- /dev/null
 +++ b/plat/qemu/qemu_sbsa/fdts/qemu_sbsa_spmc_sp_manifest.dts
-@@ -0,0 +1,118 @@
+@@ -0,0 +1,117 @@
 +/*
 + * Copyright (c) 2022, Arm Limited. All rights reserved.
 + *
@@ -63,13 +63,12 @@ index 000000000..3c0187cfa
 +       vcpu_count = <1>;
 +       mem_size = <0x0 0x300000>;
 +     };
-+     /* Example Service */
 +     vm2 {
 +       is_ffa_partition;
 +       load_address = <0x0 0x20400000>;
-+       debug_name = "therm";
++       debug_name = "ec-sp";
 +       vcpu_count = <1>;
-+       mem_size = <0x400000>;
++       mem_size = <0x500000>;
 +     };
 +   };
 +
@@ -184,8 +183,8 @@ index 000000000..1e9284248
 +      load-address = <0x20002000>;
 +      owner = "Plat";
 +    };
-+    example {
-+      uuid = "b8bcbd0c-8e8f-4ebe-99eb-3cbbdd0cd412";
++    ec-sp {
++      uuid = "e4d3bada-0edd-4e6c-a199-c19af4eae6b5";
 +      load-address = <0x20400000>;
 +      owner = "Plat";
 +    };

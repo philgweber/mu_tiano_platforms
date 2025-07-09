@@ -48,6 +48,8 @@ DefinitionBlock ("DsdtTable.aml", "DSDT",
       }
     }
 
+    #include "EcTest.asl"
+
     // AHCI Host Controller
     Device (AHC0) {
       Name (_HID, "LNRO001E")
