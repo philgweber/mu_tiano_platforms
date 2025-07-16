@@ -20,8 +20,8 @@
 	branch = dev/202502
 [submodule "Silicon/Arm/TFA"]
 	path = Silicon/Arm/TFA
-	url = https://github.com/ARM-software/arm-trusted-firmware.git
-	branch = v2.13-rc0
+	url = https://github.com/philgweber/arm-trusted-firmware.git
+	branch = philgweber/espi/dev
 [submodule "Features/DFCI"]
 	path = Features/DFCI
 	url = https://github.com/microsoft/mu_feature_dfci
